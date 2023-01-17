@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.bigrocket.provaprimeirociclo.view.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_registerFragment"
+            app:destination="@id/registerFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_listRecipeFragment"
+            app:destination="@id/listRecipeFragment" />
+        <argument
+            android:name="recipe"
+            app:argType="com.bigrocket.provaprimeirociclo.model.Recipe"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.bigrocket.provaprimeirociclo.view.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/listRecipeFragment"
+        android:name="com.bigrocket.provaprimeirociclo.view.ListRecipeFragment"
+        android:label="fragment_list_recipe"
+        tools:layout="@layout/fragment_list_recipe" >
+        <action
+            android:id="@+id/action_listRecipeFragment_to_detailsFragment"
+            app:destination="@id/detailsFragment" />
+        <argument
+            android:name="recipe"
+            app:argType="com.bigrocket.provaprimeirociclo.model.Recipe"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsFragment"
+        android:name="com.bigrocket.provaprimeirociclo.view.DetailsFragment"
+        android:label="fragment_details"
+        tools:layout="@layout/fragment_details" >
+        <argument
+            android:name="recipe"
+            app:argType="com.bigrocket.provaprimeirociclo.model.Recipe"
+            app:nullable="true"
+            android:defaultValue="@null" />
+    </fragment>
+</navigation>

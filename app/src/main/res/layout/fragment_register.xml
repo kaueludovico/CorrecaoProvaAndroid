@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.RegisterFragment">
+
+
+    <EditText
+        android:id="@+id/editTextRecipeTitle"
+        android:layout_width="375dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="88dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="Nome da Receita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/editMultiLineIngredients"
+        android:layout_width="372dp"
+        android:layout_height="126dp"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:hint="Ingredientes"
+        app:layout_constraintEnd_toEndOf="@+id/editTextRecipeTitle"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toStartOf="@+id/editTextRecipeTitle"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRecipeTitle" />
+
+    <EditText
+        android:id="@+id/editMultiLinePreparation"
+        android:layout_width="372dp"
+        android:layout_height="126dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:inputType="textMultiLine"
+        android:hint="Modo de preparo"
+        app:layout_constraintEnd_toEndOf="@+id/editMultiLineIngredients"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/editMultiLineIngredients"
+        app:layout_constraintTop_toBottomOf="@+id/editMultiLineIngredients" />
+
+    <Button
+        android:id="@+id/buttonRegister"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="Cadastrar Receita"
+        app:layout_constraintEnd_toEndOf="@+id/editMultiLinePreparation"
+        app:layout_constraintStart_toStartOf="@+id/editMultiLinePreparation"
+        app:layout_constraintTop_toBottomOf="@+id/editMultiLinePreparation" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
